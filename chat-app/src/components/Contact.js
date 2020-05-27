@@ -1,19 +1,16 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './Contact.css';
 
-const name = 'Alexandre';
-const isLoggedIn = true;
-const image = "https://avatars1.githubusercontent.com/u/47487590?s=460&u=6425b74b23778dcf23383383f1b38840de263285&v=4";
-
-function Contact() {
+function Contact(props) {
     return (
         <div className="Contact">
-            <img src={image} alt="Alex" className="avatar"></img>
+            <img src={props.avatar} alt={props.contactFirstName} className="avatar"></img>
             <div>
-                <div className="name">{name}</div>
+                <div className="name">{props.contactFirstName + ' ' + props.contactLastName}</div>
                 <div className="status">
                     {
-                        (isLoggedIn)
+                        (props.isConnect)
                             ? <div className="status-text"><span className="status-online"></span>Online</div>
                             : <div className="status-text"><span className="status-offline"></span>Offline</div>
                     }
@@ -22,5 +19,12 @@ function Contact() {
         </div>
     );
 }
+
+Contact.propTypes = {
+    contactFirstName: PropTypes.string.isRequired,
+    contactLastName: PropTypes.string.isRequired,
+    isConnect: PropTypes.bool.isRequired,
+    avatar: PropTypes.string.isRequired
+};
 
 export default Contact;
