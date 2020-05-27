@@ -1,11 +1,10 @@
 import React from 'react';
-import Contact from './components/Contact'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div className="App">
-
+      <Contact />
     </div>
   );
 }
