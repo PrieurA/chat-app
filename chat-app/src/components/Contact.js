@@ -5,12 +5,12 @@ import './Contact.css';
 function Contact(props) {
     return (
         <div className="Contact">
-            <img src={props.avatar} alt={props.contactFirstName} className="avatar"></img>
+            <img src={props.avatar} alt={props.name} className="avatar"></img>
             <div>
-                <div className="name">{props.contactFirstName + ' ' + props.contactLastName}</div>
+                <div className="name">{props.name}</div>
                 <div className="status">
                     {
-                        (props.isConnect)
+                        (props.online)
                             ? <div className="status-text"><span className="status-online"></span>Online</div>
                             : <div className="status-text"><span className="status-offline"></span>Offline</div>
                     }
@@ -21,9 +21,8 @@ function Contact(props) {
 }
 
 Contact.propTypes = {
-    contactFirstName: PropTypes.string.isRequired,
-    contactLastName: PropTypes.string.isRequired,
-    isConnect: PropTypes.bool.isRequired,
+    name: PropTypes.string.isRequired,
+    online: PropTypes.bool.isRequired,
     avatar: PropTypes.string.isRequired
 };
 
