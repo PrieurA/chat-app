@@ -1,3 +1,5 @@
+import React from "react";
+
 const name = 'Alexandre';
 const isLoggedIn = true;
 const image = "https://avatars1.githubusercontent.com/u/47487590?s=460&u=6425b74b23778dcf23383383f1b38840de263285&v=4";
