@@ -1,15 +1,12 @@
 import React from 'react';
 import Contact from './components/Contact'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Route exact path="/" component={Contact} />
-      </div>
-    </Router>
+    <div className="App">
+
+    </div>
   );
 }
 
